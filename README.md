@@ -1,5 +1,9 @@
 # luica-nvim-setting
-Nivm setting
+My Neoivm Setting
+
+Screenshot:
+
+[Screenshot-20210920-205828.png](https://postimg.cc/GBqw3rky)
 
 Plugins:
 
