@@ -2,6 +2,8 @@
 Nivm setting
 
 Plugins:
+
+
     -- Package manager
     use 'wbthomason/packer.nvim' 
     
