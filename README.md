@@ -3,7 +3,7 @@ My Neoivm Setting
 
 Screenshot:
 
-[Screenshot-20210920-205828.png](https://postimg.cc/GBqw3rky)
+[![Screenshot-20210920-205828.png](https://i.postimg.cc/j5rsXS2Z/Screenshot-20210920-205828.png)](https://postimg.cc/GBqw3rky)
 
 Plugins:
 
