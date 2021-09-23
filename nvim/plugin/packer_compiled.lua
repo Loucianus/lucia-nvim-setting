@@ -11,7 +11,7 @@ local no_errors, error_msg = pcall(function()
 
   local time
   local profile_info
-  local should_profile = true
+  local should_profile = false
   if should_profile then
     local hrtime = vim.loop.hrtime
     profile_info = {}
@@ -69,6 +69,10 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["FTerm.nvim"] = {
+    loaded = true,
+    path = "/home/lucia/.local/share/nvim/site/pack/packer/start/FTerm.nvim"
+  },
   ["auto-pairs"] = {
     loaded = true,
     path = "/home/lucia/.local/share/nvim/site/pack/packer/start/auto-pairs"
@@ -76,6 +80,10 @@ _G.packer_plugins = {
   ["completion-nvim"] = {
     loaded = true,
     path = "/home/lucia/.local/share/nvim/site/pack/packer/start/completion-nvim"
+  },
+  ["dashboard-nvim"] = {
+    loaded = true,
+    path = "/home/lucia/.local/share/nvim/site/pack/packer/start/dashboard-nvim"
   },
   ["galaxyline.nvim"] = {
     loaded = true,
@@ -85,23 +93,29 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lucia/.local/share/nvim/site/pack/packer/start/gruvbox"
   },
-  ["markdown-preview.nvim"] = {
-    commands = { "MarkdownPreview" },
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/lucia/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim"
-  },
-  nerdtree = {
+  ["lspsaga.nvim"] = {
     loaded = true,
-    path = "/home/lucia/.local/share/nvim/site/pack/packer/start/nerdtree"
+    path = "/home/lucia/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+  },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "/home/lucia/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/lucia/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/home/lucia/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/lucia/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/home/lucia/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -119,23 +133,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lucia/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
-  ["vim-devicons"] = {
-    loaded = true,
-    path = "/home/lucia/.local/share/nvim/site/pack/packer/start/vim-devicons"
-  },
   ["vim-nerdtree-syntax-highlight"] = {
     loaded = true,
     path = "/home/lucia/.local/share/nvim/site/pack/packer/start/vim-nerdtree-syntax-highlight"
+  },
+  ["vim-smoothie"] = {
+    loaded = true,
+    path = "/home/lucia/.local/share/nvim/site/pack/packer/start/vim-smoothie"
   }
 }
 
 time([[Defining packer_plugins]], false)
-
--- Command lazy-loads
-time([[Defining lazy-load commands]], true)
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file MarkdownPreview lua require("packer.load")({'markdown-preview.nvim'}, { cmd = "MarkdownPreview", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
-time([[Defining lazy-load commands]], false)
-
 if should_profile then save_profiles() end
 
 end)

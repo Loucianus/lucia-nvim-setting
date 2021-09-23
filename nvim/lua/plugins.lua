@@ -6,15 +6,14 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim' 
     
     -- LSP and completion of LSP
-    use { 'neovim/nvim-lspconfig' }
-    use { 'nvim-lua/completion-nvim' }
+    use 'neovim/nvim-lspconfig'
+    use 'nvim-lua/completion-nvim'
+    use 'glepnir/lspsaga.nvim'
 
     -- Markdown
     -- Preview
     use {
       'iamcco/markdown-preview.nvim', 
-      run = 'cd app && yarn install', 
-      cmd = 'MarkdownPreview'
     }
 
     -- Beauty
@@ -32,6 +31,8 @@ return require('packer').startup(function()
     }
     -- icons
     use 'kyazdani42/nvim-web-devicons'
+    -- dashboard
+    use 'glepnir/dashboard-nvim'
 
     -- Coding imporve
     -- Nvim Tree
@@ -49,5 +50,7 @@ return require('packer').startup(function()
     use 'tiagofumo/vim-nerdtree-syntax-highlight'
     -- Floting terminal
     use 'numtostr/FTerm.nvim'
+    -- scrolling
+    use 'psliwka/vim-smoothie'
 end)
 
